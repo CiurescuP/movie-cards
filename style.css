@@ -1,0 +1,213 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: rgb(227, 243, 239)
+}
+
+.movie-card {
+  position: relative;
+  display: block;
+  width: 800px;
+  height: 350px;
+  margin: 80px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgb(0, 0, 0);
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 80px -25px rgba(0, 0, 0, 0.550);
+    transition: all 0.4s;
+  }
+}
+
+.info-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.movie-header {
+  position: relative;
+  padding: 25px;
+  height: 40%;
+}
+
+h1 {
+  color: black;
+  font-weight: 400;
+}
+
+h4 {
+  color: #555;
+  font-weight: 400;
+}
+
+.minutes {
+  display: inline-block;
+  margin-top: 15px;
+  color: #555;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.type {
+display: inline-block;
+color: #959595;
+margin-left: 10px;
+}
+
+.cover {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  height: 120px;
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-description {
+  padding: 25px;
+  height: 50%;
+}
+
+.text {
+  color: #545454;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 40px;
+  margin-left: 7px;
+  background-image:url(pictures/play-video.png);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left;
+  border-radius:5px;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+a:hover {
+  color: #000;
+  margin-left: 25px;
+  background-color: rgb(206, 203, 203);
+  background-image:url(pictures/play-video.png);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.movie-social {
+  height: 0%;
+  padding-left: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  color: #fff;  
+  transition: color 0.3s;
+  transition-delay: 0.15s;
+  margin: 0 10px;
+  &:hover {
+    transition: color 0.3s;
+    color: rgba(236, 93, 93, 0.979);
+ }
+}
+
+i {
+  font-size: 19px;
+  cursor: pointer;
+}
+
+.blur-back {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%; right: 0;
+  background-size: cover;
+  border-radius: 11px;
+}
+
+.interstellar-back {
+  background-image: url(pictures/interstellar-thumbnail.jpg);
+}
+
+.spider-back {
+  background-image: url(pictures/spiderman-thumbnail.jpg);
+}
+
+.truman-back {
+  background-image: url(pictures/truman-thumbnail.jpg)
+}
+
+@media screen and (min-width: 768px) {
+  movie-header {
+    width: 65%;
+  }
+  .movie-description{
+    width: 50%;
+  }
+  
+  .info-section{
+    background: linear-gradient(to right, #e5e6e6 50%, transparent 100%);
+  }
+  
+  .blur-back{
+    width: 80%;
+    background-position: -100% 10% !important;  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .movie-card {
+    width: 95%;
+    margin: 70px auto;
+    min-height: 350px;
+    height: auto;
+  }
+
+  .blur-back {
+    width: 100%;
+    background-position: 50% 50% !important;
+  }
+
+  .movie-header {
+    width: 100%;
+    margin-top: 85px;
+  }
+
+  .movie-description {
+    width: 100%;
+  }
+
+  .info-section {
+    background: linear-gradient(to top, #e5e6e6 50%, transparent 100%);
+    display: inline-grid;
+}
+}
